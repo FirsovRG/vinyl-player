@@ -1,0 +1,6 @@
+@import '../../vars.css';
+
+.app {
+    height: 100vh;
+    background-color: var(--main-background);
+}

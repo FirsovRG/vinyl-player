@@ -1,0 +1,15 @@
+@import '../../vars.css';
+
+.vinyl-record-disk {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: var(--vinyl-disk-background);
+
+    &__outer-border {
+        height: 500px;
+        width: 500px;
+        border-radius: 50%;
+        border: 3px solid white;
+    }
+}
