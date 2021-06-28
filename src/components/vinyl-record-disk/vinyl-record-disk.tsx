@@ -9,7 +9,7 @@ const cn = createCn('vinyl-record-disk');
 
 const VinylRecordDisk = () => {
     
-    const renderTrackStripe = (count: number = 0) => {
+    const renderTrackStripe = (count = 0) => {
         if (count === 25) {
             return null;
         }
