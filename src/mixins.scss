@@ -1,0 +1,44 @@
+@mixin rotate-vinyl-animation {
+    animation: rotating 2s linear infinite;
+
+    @keyframes rotating {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+    }
+}
+
+@mixin shake-track-flare {
+    animation: shaking 3s ease-in-out infinite;
+
+    @keyframes shaking {
+        0% {
+          transform: rotate(40deg) skew(77deg);
+        }
+        50% {
+          transform: rotate(50deg) skew(77deg);
+        }
+        100% {
+          transform: rotate(40deg) skew(77deg);
+        }
+    }
+}
+
+@mixin shake-track-flare-inverted {
+    animation: shaking-inverted 3s ease-in-out infinite;
+
+    @keyframes shaking-inverted {
+        0% {
+          transform: rotate(40deg) skew(77deg) scale(-1, -1);
+        }
+        50% {
+          transform: rotate(50deg) skew(77deg) scale(-1, -1);
+        }
+        100% {
+          transform: rotate(40deg) skew(77deg) scale(-1, -1);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import '../../vars.scss';
+
+.app {
+    height: 100vh;
+    background-color: var(--main-background);
+    position: relative;
+
+    &__vinyl-player {
+        width: 674px;
+        height: 674px;
+        background-color: var(--vinyl-disk-background);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // TODO: remove when player is ready
+        z-index: 2;
+        position: relative;
+        top: 459px;
+        left: 127px;
+        // opacity: 0.5;
+    }
+}

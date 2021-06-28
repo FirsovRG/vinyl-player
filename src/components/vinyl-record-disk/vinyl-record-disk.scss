@@ -1,0 +1,121 @@
+@import '../../vars.scss';
+@import '../../mixins.scss';
+
+.vinyl-record-disk {
+    height: 630px;
+    width: 630px;
+    border-radius: 50%;
+    background-color: var(--vinyl-disk-background);
+    border-radius: 50%;
+    border: 6px solid var(--vinyl-disk-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+
+    &__vinyl-track-stripe {
+        width: 97%;
+        height: 97%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--vinyl-track-stripe);
+    }
+
+    &__outer-track-border {
+        width: 293px;
+        height: 293px;
+        background-color: var(--vinyl-disk-background);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @include rotate-vinyl-animation;
+    }
+
+    &__inner-track-border {
+        width: 233px;
+        height: 233px;
+        background-color: var(--vinyl-disk-background);
+        border: 4px solid var(--vinyl-disk-border);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 999;
+    }
+
+    &__tracks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @include rotate-vinyl-animation;
+    }
+
+    &__vinyl-tracks-shadow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__shadow-wrapper{
+        position: absolute;
+
+        &_inverted {
+            transform: scale(-1, -1);
+        }
+    }
+
+    &__small-cirlce {
+        height: 365px;
+        width: 365px;
+        background-color: var(--vinyl-disk-background);
+        border-radius: 50%;
+        position: absolute;
+        top: -299px;
+        left: -29px;
+    }
+
+    &__big-circle {
+        height: 500px;
+        width: 500px;
+        background-color: var(--vinyl-disk-background);
+        border-radius: 50%;
+        position: absolute;
+        top: -457px;
+        left: 22px;
+    }
+
+    &__vinyl-tracks-flare {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    &__flare-sector {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100%;
+        width: 100%;
+        background: var(--vinyl-disk-border);
+        transform-origin: 0 0;
+        transform: rotate(45deg) skew(77deg);
+        opacity: 1;
+        @include shake-track-flare;
+
+        &_inverted {
+            transform: scale(-1, -1) rotate(45deg) skew(77deg);
+            @include shake-track-flare-inverted;
+        }
+    }
+}
