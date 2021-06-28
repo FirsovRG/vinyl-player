@@ -1,1 +1,1 @@
-export { default } from './vinyl-record-info'
+export { default } from './vinyl-record-info';

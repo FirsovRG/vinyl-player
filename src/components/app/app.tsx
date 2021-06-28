@@ -9,20 +9,20 @@ import './app.scss';
 const cn = createCn('app');
 
 const App = () => (
-    <div className={cn()}>
-        <div className={cn('vinyl-player')}>
-            <VinylRecordDisk />
-        </div>
-        <img
-            src={imgsrc}
-            alt=""
-            style={{
-                position: 'absolute',
-                top: 0,
-                zIndex: 0,
-            }}
-        />
-    </div>
+	<div className={cn()}>
+		<div className={cn('vinyl-player')}>
+			<VinylRecordDisk />
+		</div>
+		<img
+			src={imgsrc}
+			alt=""
+			style={{
+				position: 'absolute',
+				top: 0,
+				zIndex: 0,
+			}}
+		/>
+	</div>
 );
 
 export default App;
